@@ -1,0 +1,55 @@
+.container {
+  position: relative;
+  height: 40em;
+  width: 50em;
+  margin: 0 auto;
+}
+
+label {
+  z-index: 2;
+  background-color: gray;
+  display: inline-block;
+  padding: .25em .3em 0; 
+  margin: .4em 0 0 -.4em;
+  opacity: .3;
+  transition: opacity .5s;
+}
+
+label:hover {
+  opacity: 1;
+  transition: all .4s;
+  transform: scale(1.05, 1.05);
+  z-index: 3;
+}
+
+.container label:first-child {
+  margin-left: .5em;
+}
+
+input {
+  position: absolute;
+  visibility: hidden;
+}
+
+label img {
+  height: 5em;
+  width: 7em;
+}
+
+.picture img {
+  height: 100%;
+  width: 100%;
+}
+
+.picture {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  top: 0;
+  left: 0;
+}
+
+input:checked + div {
+  opacity: 1;
+  transition: all 1s;
+}
